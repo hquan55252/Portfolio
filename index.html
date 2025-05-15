@@ -21,65 +21,78 @@
     <!-- tên tác giả web -->
     <meta name="author" content="Hồng Quân" />
     <!-- biểu tượng cho web, xuật hiện trên tab trình duyệt -->
-    <link rel="icon" href="images\favicon.ico" />
+    <link rel="icon" href="images/favicon.ico" />
+
     <meta />
     <!-- tiêu đề của trang web -->
     <title>Portfolio của Hồng Quân</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main>
-      <section>
-        <div>
-          <!-- Header section -->
-          <header>
-            <a href="#" style="display: inline-block">Portfolio</a>
-            <nav>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li>
-                  <a href="#">About Me</a>
-                </li>
-                <li>
-                  <a href="#">Portfolio</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </header>
-          <!-- Main Content Section -->
-          <main>
-            <!-- Home Section -->
-            <section>
-              <div>
-                <h1>Hi! I'm <span>Hong Quan</span></h1>
-                <h2>Front-end Developer</h2>
-                <p>
-                  My name is Hong Quan. I am a university student with a passion
-                  for learning and growing in the field of front-end
-                  development. Currently studying at a University, I am gaining
-                  experience in HTML, CSS, JavaScript, ReactJS, and Tailwind
-                  CSS. I’m excited about building interactive and responsive
-                  websites that provide a seamless user experience. My goal is
-                  to apply my skills in real-world projects and continue to
-                  improve as a developer.
-                </p>
-                <div>
-                  <a href="#">YouTube</a><a href="#">Github</a
-                  ><a href="#">Facebook</a>
-                </div>
-              </div>
-            </section>
-            <!-- About Me Section -->
-            <section></section>
-            <!-- Portfolio Section -->
-            <section></section>
-          </main>
-          <!-- Footer Section -->
-          <footer>footer</footer>
+    <!-- <main> -->
+    <!-- <section> -->
+    <div class="container">
+      <!-- Header section -->
+      <header class="animated">
+        <a href="#" style="display: inline-block" class="logo">Portfolio</a>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li>
+              <a href="#">About Me</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Main Content Section -->
+      <!-- Home Section -->
+      <section class="home animated">
+        <div class="home-detail">
+          <h1>Hi! I'm <span>Hong Quan</span></h1>
+          <h2>Front-end Developer</h2>
+          <p>
+            My name is Hong Quan. I am a university student with a passion for
+            learning and growing in the field of front-end development.
+            Currently studying at a University, I am gaining experience in HTML,
+            CSS, JavaScript, ReactJS, and Tailwind CSS. I’m excited about
+            building interactive and responsive websites that provide a seamless
+            user experience. My goal is to apply my skills in real-world
+            projects and continue to improve as a developer.
+          </p>
+          <div class="download-social">
+            <a href="#" class="download-btn">Download CV</a>
+            <div class="social-icons">
+              <a href="#" class="ri-youtube-fill"></a>
+              <a href="#" class="ri-github-fill"></a>
+              <a href="#" class="ri-facebook-fill"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-img">
+          <div class="box-img">
+            <img src="images\hongquan-portrait.png" alt="" />
+          </div>
         </div>
       </section>
-    </main>
+      <!-- About Me Section -->
+      <section></section>
+      <!-- Portfolio Section -->
+      <section></section>
+      <!-- Footer Section -->
+      <footer>footer</footer>
+    </div>
+    <!-- </section>
+    </main> -->
   </body>
 </html>
