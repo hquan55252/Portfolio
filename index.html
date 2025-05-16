@@ -27,38 +27,46 @@
     <!-- tiêu đề của trang web -->
     <title>Portfolio của Hồng Quân</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <main> -->
-    <!-- <section> -->
-    <div class="container">
-      <!-- Header section -->
-      <header class="animated">
-        <a href="#" style="display: inline-block" class="logo">Portfolio</a>
-        <nav class="navbar">
-          <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li>
-              <a href="#">About Me</a>
-            </li>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <!-- Main Content Section -->
+    <!-- Header section -->
+    <header class="">
+      <a href="#" style="display: inline-block" class="logo">Portfolio</a>
+
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="#" class="active">Home</a>
+          </li>
+          <li>
+            <a href="#">About Me</a>
+          </li>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Content Section -->
+    <main>
       <!-- Home Section -->
-      <section class="home animated">
+      <section class="home">
         <div class="home-detail">
-          <h1>Hi! I'm <span>Hong Quan</span></h1>
+          <h1>
+            Hi! I'm
+            <span style="--i: 3" data-text="Hong Quan">Hong Quan</span>
+            <span style="--i: 2" data-text="Student">Student</span>
+            <span style="--i: 1" data-text="Coder">Coder</span>
+          </h1>
           <h2>Front-end Developer</h2>
           <p>
             My name is Hong Quan. I am a university student with a passion for
@@ -72,27 +80,36 @@
           <div class="download-social">
             <a href="#" class="download-btn">Download CV</a>
             <div class="social-icons">
-              <a href="#" class="ri-youtube-fill"></a>
-              <a href="#" class="ri-github-fill"></a>
-              <a href="#" class="ri-facebook-fill"></a>
+              <a href="#">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-discord"></i>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="home-img">
           <div class="box-img">
-            <img src="images\hongquan-portrait.png" alt="" />
+            <div class="item-img">
+              <img src="images\hongquan-portrait.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
       <!-- About Me Section -->
-      <section></section>
+      <!-- <section></section> -->
       <!-- Portfolio Section -->
-      <section></section>
+      <!-- <section></section> -->
       <!-- Footer Section -->
-      <footer>footer</footer>
-    </div>
-    <!-- </section>
-    </main> -->
+    </main>
+    <footer>footer</footer>
+
+    <!--  -->
+    <script src="js/js.js"></script>
   </body>
 </html>
