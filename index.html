@@ -1,7 +1,7 @@
 <!-- Này là khai báo, không phải thẻ html. Nó là thông tin cho browser về document type -->
 <!DOCTYPE html>
 <!-- Khai báo ngôn ngữ của trang web -->
-<html lang="vi">
+<html lang="en">
   <!-- Là container chứ các elements: <title>, <style>, <meta>, <link>, <script>, and <base> -->
   <head>
     <!-- dùng để mã hóa các kí tự cho html -->
@@ -25,7 +25,7 @@
 
     <meta />
     <!-- tiêu đề của trang web -->
-    <title>Portfolio của Hồng Quân</title>
+    <title>Portfolio of Hong Quan</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -34,81 +34,271 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Header section -->
-    <header class="">
-      <a href="#" style="display: inline-block" class="logo">Portfolio</a>
-
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href="#" class="active">Home</a>
-          </li>
-          <li>
-            <a href="#">About Me</a>
-          </li>
-          <li>
-            <a href="#">Portfolio</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- Main Content Section -->
-    <main>
-      <!-- Home Section -->
-      <section class="home">
-        <div class="home-detail">
-          <h1>
-            Hi! I'm
-            <span style="--i: 3" data-text="Hong Quan">Hong Quan</span>
-            <span style="--i: 2" data-text="Student">Student</span>
-            <span style="--i: 1" data-text="Coder">Coder</span>
-          </h1>
-          <h2>Front-end Developer</h2>
-          <p>
-            My name is Hong Quan. I am a university student with a passion for
-            learning and growing in the field of front-end development.
-            Currently studying at a University, I am gaining experience in HTML,
-            CSS, JavaScript, ReactJS, and Tailwind CSS. I’m excited about
-            building interactive and responsive websites that provide a seamless
-            user experience. My goal is to apply my skills in real-world
-            projects and continue to improve as a developer.
-          </p>
-          <div class="download-social">
-            <a href="#" class="download-btn">Download CV</a>
-            <div class="social-icons">
-              <a href="#">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-discord"></i>
-              </a>
+    <div class="root-container">
+      <!-- Header section -->
+      <header class="header" id="header">
+        <div class="container">
+          <nav class="navbar">
+            <a
+              href="#hero-banner"
+              style="display: inline-block"
+              class="navbar__logo"
+              >Portfolio</a
+            >
+            <div class="nav__menu">
+              <ul>
+                <li class="nav__item">
+                  <a href="#hero-banner" class="nav__link active">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#projects" class="nav__link">Projects</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#about-me" class="nav__link">About Me</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contact" class="nav__link">Contact</a>
+                </li>
+              </ul>
             </div>
-          </div>
+            <button class="btn btn-tertiary login-btn">Login</button>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </nav>
         </div>
 
-        <div class="home-img">
-          <div class="box-img">
-            <div class="item-img">
-              <img src="images\hongquan-portrait.png" alt="" />
+        <!-- /*=============== MOBILE NAV ===============*/ -->
+        <!-- <div class="nav__mobile-menu">
+          Close button
+            <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+          <nav class="nav__mobile-list">
+            <ul >
+            <li class="nav__item">
+              <a href="#home" class="nav__link active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about-me" class="nav__link">About Me</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+          </nav>
+        </div> -->
+      </header>
+
+      <!-- Main Content Section -->
+      <main>
+        <!-- =============== HERO SECTION =============== -->
+        <section id="hero-banner">
+          <div class="container">
+            <div class="hero-banner__container">
+              <div class="hero-banner__left">
+                <h1>
+                  Hi! I'm
+                  <span style="--i: 2" data-text="Student">Student</span>
+                  <span style="--i: 1" data-text="Coder">Coder</span>
+                </h1>
+                <h2>Front-end Developer</h2>
+                <p>
+                  My name is Hong Quan. I am a university student with a passion
+                  for learning and growing in the field of front-end
+                  development. Currently studying at a University, I am gaining
+                  experience in HTML, CSS, JavaScript, ReactJS, and Tailwind
+                  CSS.
+                </p>
+                <div class="hero-banner__media-social">
+                  <div>
+                    <a href="#" class="download-cv_btn">Download CV</a>
+                  </div>
+                  <div class="media-social__icons">
+                    <a href="#" target="_blank" class="media-soical__icon">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" class="media-soical__icon">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank" class="media-soical__icon">
+                      <i class="fa-brands fa-discord"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-banner__right">
+                <div class="hero-banner__box-image">
+                  <div class="hero-banner__image">
+                    <img
+                      src="images\hongquan-portrait.png"
+                      alt="portrait of Hong Quan"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- About Me Section -->
-      <!-- <section></section> -->
-      <!-- Portfolio Section -->
-      <!-- <section></section> -->
-      <!-- Footer Section -->
-    </main>
-    <footer>footer</footer>
+        </section>
 
+        <!-- =============== PROJECTS SECTION =============== -->
+        <section class="section-spacer" id="projects">
+          <div class="container projects__container">
+            <div class="projects__title">
+              <i class="fa-solid fa-layer-group"></i>
+              <h2>My projects</h2>
+            </div>
+            <div class="projects__list">
+              <ul>
+                <li class="project__card">
+                  <img
+                    src="/images/image-1.jpg"
+                    alt="project image"
+                    class="project__image"
+                  />
+                  <div class="project__card-body">
+                    <h3 class="card-title">Project 1</h3>
+                    <div class="card-description">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Eligendi quod dolor corrupti facilis quos laborum itaque
+                      impedit magni dolorem distinctio? Voluptate libero rerum,
+                      praesentium hic maxime a quos consectetur minus?
+                    </div>
+                  </div>
+                  <div class="project__card-footer">
+                    <a class="btn btn-tertiary card-link" href="#">
+                      <span>View Project</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="project__card">
+                  <img
+                    src="/images/image-2.jpg"
+                    alt="logo"
+                    class="project__image"
+                  />
+                  <div class="project__card-body">
+                    <h3 class="card-title">Project 1</h3>
+                    <div class="card-description">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Eligendi quod dolor corrupti facilis quos laborum itaque
+                      impedit magni dolorem distinctio? Voluptate libero rerum,
+                      praesentium hic maxime a quos consectetur minus?
+                    </div>
+                  </div>
+                  <div class="project__card-footer">
+                    <a class="btn btn-tertiary card-link" href="#">
+                      <span>View Project</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="project__card">
+                  <img
+                    src="/images/background.jpg"
+                    alt="logo"
+                    class="project__image"
+                  />
+                  <div class="project__card-body">
+                    <h3 class="card-title">Project 1</h3>
+                    <div class="card-description">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Eligendi quod dolor corrupti facilis quos laborum itaque
+                      impedit magni dolorem distinctio? Voluptate libero rerum,
+                      praesentium hic maxime a quos consectetur minus?
+                    </div>
+                  </div>
+                  <div class="project__card-footer">
+                    <a class="btn btn-tertiary card-link" href="#">
+                      <span>View Project</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== ABOUT SECTION =============== -->
+        <section class="section-spacer" id="about-me">
+          <div class="container">
+            <div class="about__container">
+              <div class="about__image-media">
+                <img
+                  src="./images/hongquan-portrait.png"
+                  alt="portrait of Hong Quan"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about__description">
+                <h2>Hoang Hong Quan - Front End Developer.</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                  laborum autem officiis fuga veritatis atque laboriosam, nisi
+                  odit dignissimos debitis magnam excepturi itaque quam
+                  perferendis in placeat, vero harum! Iusto.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                  laborum autem officiis fuga veritatis atque laboriosam, nisi
+                  odit dignissimos debitis magnam excepturi itaque quam
+                  perferendis in placeat, vero harum! Iusto.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                  laborum autem officiis fuga veritatis atque laboriosam, nisi
+                  odit dignissimos debitis magnam excepturi itaque quam
+                  perferendis in placeat, vero harum! Iusto.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CONTACT SECTION =============== -->
+        <section class="section-spacer" id="contact">
+          <div class="container contact__container">
+            <h2>Contact Me</h2>
+            <form id="contact__form" action="">
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" />
+              </div>
+              <div class="form-control">
+                <label for="notes">Notes</label>
+                <textarea
+                  name="notes"
+                  id="notes"
+                  rows="10"
+                  cols="50"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-tertiary contact-btn">
+                CONTACT ME NOW
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- =============== FOOTER SECTION =============== -->
+      <!-- <footer>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2025 Tên Của Bạn. All rights reserved.</p>
+      </footer> -->
+    </div>
     <!--  -->
     <script src="js/js.js"></script>
   </body>
