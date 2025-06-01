@@ -104,6 +104,21 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+.arrow-up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: var(--white-color);
+}
+
+@media (min-width: 1024px) {
+  .arrow-up {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
