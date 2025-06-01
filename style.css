@@ -210,13 +210,13 @@ header {
 
 .nav__menu ul {
   display: flex;
-  gap: 40px;
+  gap: 70px;
   animation: slideInFromTop 1s ease-out forwards;
 }
 
 .nav__item a {
   color: var(--white-color);
-  font-size: var(--h3-font-size);
+  font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
   position: relative;
 }
@@ -751,22 +751,48 @@ header {
   box-shadow: 0 0 12px rgba(99, 179, 237, 0.9);
 }
 
-/* .card-link {
+/* <!-- =============== FOOTER SECTION =============== --> */
+footer {
+  background-color: var(--second-bg-color);
+}
+
+.footer {
   display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 50px 0;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    gap: 100px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  width: 150px;
-  line-height: 1.5;
-  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .footer__top {
+    flex-direction: row;
+    gap: 0px;
+  }
+}
+
+.nav__footer ul {
+  display: flex;
+  gap: 50px;
+}
+*/ .nav__footer ul li a {
   color: var(--white-color);
-  background-color: var(--bg-button);
-  border-color: var(--bg-button);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    0 1px 1px rgba(23, 31, 56, 0.075);
-  border-radius: 16px;
-  transition: all 0.2s ease;
-  padding: 8.8px 12px;
-  cursor: pointer;
-  margin-bottom: 24px;
-} */
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+}

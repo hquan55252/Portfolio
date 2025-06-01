@@ -43,8 +43,8 @@
               href="#hero-banner"
               style="display: inline-block"
               class="navbar__logo"
-              >Portfolio</a
-            >
+              >Portfolio
+            </a>
             <div class="nav__menu">
               <ul>
                 <li class="nav__item">
@@ -158,6 +158,7 @@
                     src="/images/image-1.jpg"
                     alt="project image"
                     class="project__image"
+                    loading="lazy"
                   />
                   <div class="project__card-body">
                     <h3 class="card-title">Project 1</h3>
@@ -180,6 +181,7 @@
                     src="/images/image-2.jpg"
                     alt="logo"
                     class="project__image"
+                    loading="lazy"
                   />
                   <div class="project__card-body">
                     <h3 class="card-title">Project 1</h3>
@@ -202,6 +204,30 @@
                     src="/images/background.jpg"
                     alt="logo"
                     class="project__image"
+                    loading="lazy"
+                  />
+                  <div class="project__card-body">
+                    <h3 class="card-title">Project 1</h3>
+                    <div class="card-description">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Eligendi quod dolor corrupti facilis quos laborum itaque
+                      impedit magni dolorem distinctio? Voluptate libero rerum,
+                      praesentium hic maxime a quos consectetur minus?
+                    </div>
+                  </div>
+                  <div class="project__card-footer">
+                    <a class="btn btn-tertiary card-link" href="#">
+                      <span>View Project</span>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </li>
+                <li class="project__card">
+                  <img
+                    src="/images/background.jpg"
+                    alt="logo"
+                    class="project__image"
+                    loading="lazy"
                   />
                   <div class="project__card-body">
                     <h3 class="card-title">Project 1</h3>
@@ -287,17 +313,41 @@
       </main>
 
       <!-- =============== FOOTER SECTION =============== -->
-      <!-- <footer>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about-me">About me</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <p>&copy; 2025 Tên Của Bạn. All rights reserved.</p>
-      </footer> -->
+      <footer>
+        <div class="container">
+          <div class="footer">
+            <div class="footer__top">
+              <div>
+                <a
+                  href="#hero-banner"
+                  style="display: inline-block"
+                  class="navbar__logo"
+                  >Portfolio
+                </a>
+              </div>
+              <nav class="nav__footer">
+                <ul>
+                  <li class="nav__item">
+                    <a href="#hero-banner" class="nav__link active">Home</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#projects" class="nav__link">Projects</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#about-me" class="nav__link">About Me</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <p class="footer__bottom">
+              &copy; 2025 HongQuan. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
     <!--  -->
     <script src="js/js.js"></script>
