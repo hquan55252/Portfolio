@@ -75,6 +75,7 @@ body {
   background-color: var(--bg-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  height: 100%;
 }
 
 h1,
@@ -101,8 +102,16 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .root-container {
   min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 80px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 .arrow-up {
@@ -110,13 +119,18 @@ img {
   right: 10px;
   bottom: 10px;
   color: var(--white-color);
+  z-index: 9999;
 }
 
 @media (min-width: 1024px) {
   .arrow-up {
-    right: 40px;
-    bottom: 40px;
+    right: 20px;
+    bottom: 20px;
   }
+}
+
+section {
+  height: 100%;
 }
 
 .container {
@@ -225,7 +239,7 @@ header {
 
 .nav__menu ul {
   display: flex;
-  gap: 70px;
+  gap: 50px;
   animation: slideInFromTop 1s ease-out forwards;
 }
 
@@ -320,6 +334,12 @@ header {
   border-bottom-left-radius: var(--border-radius-base);
 }
 
+@media (min-width: 1024px) {
+  .nav__mobile-menu {
+    display: none;
+  }
+}
+
 .close-btn {
   position: absolute;
   right: 1.5rem;
@@ -329,6 +349,9 @@ header {
   outline: none;
   font-size: var(--h2-font-size);
   cursor: pointer;
+}
+
+.close-btn:focus {
 }
 
 .nav__mobile-list ul {
@@ -366,7 +389,7 @@ header {
 /*=============== HERO SECTION ===============*/
 
 .hero-banner__container {
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 70px;
   display: flex;
   flex-wrap: wrap-reverse;
@@ -674,6 +697,111 @@ header {
 
 .card-link > span {
   margin-right: 10px;
+}
+
+/*=============== SKILLS SECTION ===============*/
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.skills__item {
+  width: 100%;
+}
+
+.skills__item ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+@media (min-width: 768px) {
+  .skills__item ul {
+    grid-template-columns: repeat(3, 1fr);
+    align-content: space-between;
+  }
+}
+
+.skills__item ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.skills__item ul li div {
+  background-color: var(--second-bg-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--second-bg-color);
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.skill__icon {
+  font-size: 1.75rem;
+  position: relative;
+  z-index: 3;
+  transition: 0.5s;
+  color: var(--white-color);
+}
+
+.skills__item ul li div:hover .skill__icon {
+  transform: rotateY(360deg);
+}
+
+.skills__item ul li div:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.skills__item ul li div:hover:before {
+  top: 0;
+}
+
+.skills__item ul li:nth-child(1) div:hover .skill__icon {
+  color: #e44d26;
+}
+
+.skills__item ul li:nth-child(2) div:hover .skill__icon {
+  color: #3b5999;
+}
+
+.skills__item ul li:nth-child(3) div:hover .skill__icon {
+  color: #e8d44d;
+}
+
+.skills__item ul li:nth-child(4) div:hover .skill__icon {
+  color: #78d8f7;
+}
+
+.skills__item ul li:nth-child(5) div:hover .skill__icon {
+  color: #36b7f0;
+}
+
+.skills__item ul li:nth-child(6) div:hover .skill__icon {
+  color: #2f74c0;
+}
+
+.skills__item ul li span {
+  text-transform: uppercase;
+  font-weight: var(--font-semi-bold);
 }
 
 /*=============== ABOUT SECTION ===============*/
