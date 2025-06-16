@@ -70,15 +70,17 @@
             </div>
             <button class="btn btn-tertiary login-btn">Login</button>
             <!-- Toggle button -->
-            <div class="nav__toggle" id="nav-toggle">
+            <button class="nav__toggle" id="open-menu-mobile">
               <i class="fa-solid fa-bars"></i>
-            </div>
+            </button>
           </nav>
         </div>
 
         <!-- /*=============== MOBILE NAV ===============*/ -->
-        <!-- <div class="nav__mobile-menu">
-          <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="nav__mobile-menu" id="nav__mobile-menu">
+          <button class="close-btn" id="close-menu-mobile">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <nav class="nav__mobile-list">
             <ul>
               <li class="nav__item">
@@ -95,7 +97,7 @@
               </li>
             </ul>
           </nav>
-        </div> -->
+        </div>
       </header>
 
       <!-- Main Content Section -->
@@ -130,7 +132,11 @@
                     >
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="#" target="_blank" class="media-social__icon">
+                    <a
+                      href="https://www.linkedin.com/in/qu%C3%A2n-ho%C3%A0ng-2bb575364"
+                      target="_blank"
+                      class="media-social__icon"
+                    >
                       <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <a
@@ -353,22 +359,19 @@
               <div class="about__description">
                 <h2>Hoang Hong Quan - Front End Developer.</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  laborum autem officiis fuga veritatis atque laboriosam, nisi
-                  odit dignissimos debitis magnam excepturi itaque quam
-                  perferendis in placeat, vero harum! Iusto.
+                  I'm Hoang Hong Quan, a 22-year-old final-year Software
+                  Engineering student at FPT University, Ho Chi Minh City. While
+                  I might come across as a bit shy at first, I quickly become
+                  more open and engaging when surrounded by friendly and
+                  welcoming people. My career goal is to become a front-end
+                  developer, with a long-term aspiration of transitioning into a
+                  full-stack developer.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  laborum autem officiis fuga veritatis atque laboriosam, nisi
-                  odit dignissimos debitis magnam excepturi itaque quam
-                  perferendis in placeat, vero harum! Iusto.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-                  laborum autem officiis fuga veritatis atque laboriosam, nisi
-                  odit dignissimos debitis magnam excepturi itaque quam
-                  perferendis in placeat, vero harum! Iusto.
+                  Beyond my studies, I'm a big fan of sports, particularly
+                  football, badminton, and table tennis. When I'm not playing
+                  sports, you'll often find me listening to music, watching
+                  movies, or simply enjoying a chat with friends.
                 </p>
               </div>
             </div>
@@ -379,10 +382,11 @@
         <section class="section-spacer" id="contact">
           <div class="container contact__container">
             <h2>Contact Me</h2>
-            <form id="contact__form" action="">
+            <form id="contact__form">
               <div class="form-control">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" />
+                <small class="error" id="email-error"></small>
               </div>
               <div class="form-control">
                 <label for="notes">Notes</label>
@@ -392,6 +396,7 @@
                   rows="10"
                   cols="50"
                 ></textarea>
+                <small class="error" id="notes-error"></small>
               </div>
               <button type="submit" class="btn btn-tertiary contact-btn">
                 CONTACT ME NOW
@@ -411,7 +416,7 @@
                   href="#hero-banner"
                   style="display: inline-block"
                   class="navbar__logo"
-                  >Portfolio
+                  >HongQuan
                 </a>
               </div>
               <nav class="nav__footer">
@@ -439,6 +444,6 @@
       </footer>
     </div>
     <!--  -->
-    <script src="js/js.js"></script>
+    <script src="./js.js"></script>
   </body>
 </html>

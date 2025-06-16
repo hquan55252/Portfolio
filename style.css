@@ -197,7 +197,18 @@ header {
   padding: 16px;
   background-color: var(--bg-color);
   z-index: var(--z-fixed);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+header.scrolled-up {
+  background-color: var(--second-bg-color);
+}
+
+header.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .navbar {
@@ -307,6 +318,7 @@ header {
   width: 32px;
   height: 32px;
   background-color: var(--bg-button);
+  color: var(--white-color);
   display: grid;
   place-items: center;
   font-size: 1.25rem;
@@ -321,17 +333,23 @@ header {
 
 /*=============== MOBILE NAV ===============*/
 
-/* .nav__mobile-menu {
+.nav__mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
   width: 70vw;
   height: 100vh;
-  background-color: hsla(0, 0%, 0%, 0.75);
+  transform: translateX(100%);
+  background-color: hsla(0, 0%, 0%, 0.95);
   padding: 1.5rem;
   z-index: 10000;
   border-top-left-radius: var(--border-radius-base);
   border-bottom-left-radius: var(--border-radius-base);
+  transition: 0.3s ease;
+}
+
+.nav__mobile-menu.active {
+  transform: translateX(0);
 }
 
 @media (min-width: 1024px) {
@@ -384,7 +402,7 @@ header {
 
 .nav__link:hover::after {
   width: 100%;
-} */
+}
 
 /*=============== HERO SECTION ===============*/
 
@@ -707,13 +725,30 @@ header {
   gap: 80px;
 }
 
+.skills__container h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.skills__container h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 60%;
+  background-color: var(--main-color);
+  z-index: 1;
+}
+
 .skills__item {
   width: 100%;
 }
 
 .skills__item ul {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 64px;
 }
 
@@ -811,6 +846,12 @@ header {
   gap: 30px;
 }
 
+@media (min-width: 768px) {
+  .about__container {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 1024px) {
   .about__container {
     flex-direction: row;
@@ -892,6 +933,10 @@ header {
 .form-control textarea:focus {
   border-color: #63b3ed; /* xanh nhạt khi focus */
   box-shadow: 0 0 12px rgba(99, 179, 237, 0.9);
+}
+
+.form-control .error {
+  color: red;
 }
 
 /* <!-- =============== FOOTER SECTION =============== --> */
